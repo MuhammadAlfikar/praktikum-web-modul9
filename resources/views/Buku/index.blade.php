@@ -7,6 +7,13 @@
 
     <h1>Daftar Buku</h1>
 
+    <p>Masuk sebagai {{ auth()->user()->name }}</p>
+
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit">Keluar</button>
+    </form>
+    
     @if(session('success'))
         <p>{{ session('success') }}</p>
     @endif
